@@ -3,30 +3,34 @@ import { Link } from 'react-router-dom'
 export default function InsightsPage() {
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+      {/* Ambient orbs */}
+      <div className="fixed top-1/4 -right-32 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[120px] animate-orb pointer-events-none" />
+      <div className="fixed bottom-1/3 -left-32 w-[400px] h-[400px] bg-tertiary/3 rounded-full blur-[100px] animate-orb pointer-events-none" style={{ animationDelay: '4s' }} />
+
       {/* Header */}
-      <header className="mb-16 md:mb-24 max-w-3xl animate-fade-in-up">
+      <header className="mb-16 md:mb-24 max-w-3xl animate-fade-in-up relative z-10">
         <span className="font-label text-sm uppercase tracking-[0.2em] text-primary mb-4 block">
           The Celestial Editorial
         </span>
-        <h1 className="font-headline font-serif text-5xl md:text-7xl font-bold text-on-surface leading-tight -tracking-[0.02em] italic">
-          Your Path is Written in the Stars and Your Palms.
+        <h1 className="font-headline font-serif text-5xl md:text-7xl font-bold leading-tight -tracking-[0.02em] italic">
+          <span className="gradient-text-hero">Your Path is Written in Your Palms.</span>
         </h1>
       </header>
 
       {/* Insights Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24 relative z-10">
         {/* Main Preview */}
-        <div className="md:col-span-8 bg-surface-container-lowest rounded-xl p-10 flex flex-col md:flex-row gap-10 items-start">
+        <div className="md:col-span-8 glass-card-strong rounded-2xl p-10 flex flex-col md:flex-row gap-10 items-start hover-lift">
           <div className="w-full md:w-1/2 aspect-[3/4] rounded-xl overflow-hidden relative">
             <img
               className="w-full h-full object-cover"
               src="/images/palm-insights.png"
               alt="Palm insights"
             />
-            <div className="absolute inset-0 bg-indigo-900/10 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-primary/5 mix-blend-multiply" />
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="font-headline font-serif text-3xl mb-6">
+            <h2 className="font-headline font-serif text-3xl mb-6 text-on-surface">
               Major heart line detected
             </h2>
             <p className="text-on-surface-variant leading-relaxed mb-8 text-lg">
@@ -41,15 +45,15 @@ export default function InsightsPage() {
                   flare
                 </span>
                 <span className="font-label text-sm">
-                  Vitality Index: High
+                  Vitality Index: <span className="text-tertiary font-semibold">High</span>
                 </span>
               </div>
               <div className="flex items-center gap-4 text-on-surface-variant">
-                <span className="material-symbols-outlined text-tertiary">
+                <span className="material-symbols-outlined text-primary">
                   storm
                 </span>
                 <span className="font-label text-sm">
-                  Emotional Depth: Expansive
+                  Emotional Depth: <span className="text-primary font-semibold">Expansive</span>
                 </span>
               </div>
             </div>
@@ -58,11 +62,11 @@ export default function InsightsPage() {
 
         {/* Side Teasers */}
         <div className="md:col-span-4 space-y-8">
-          <div className="bg-surface-container-low rounded-xl p-8 border-l-4 border-tertiary">
+          <div className="glass-card rounded-2xl p-8 border-l-4 border-tertiary hover-lift">
             <span className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">
               Quick Insight
             </span>
-            <h3 className="font-headline font-serif text-xl mb-3">
+            <h3 className="font-headline font-serif text-xl mb-3 text-on-surface">
               Mount of Apollo
             </h3>
             <p className="text-on-surface-variant text-sm">
@@ -70,27 +74,27 @@ export default function InsightsPage() {
               awaits in the coming moon cycle.
             </p>
           </div>
-          <div className="bg-inverse-surface text-on-secondary rounded-xl p-8 relative overflow-hidden">
+          <div className="bg-inverse-surface rounded-2xl p-8 relative overflow-hidden hover-lift">
             <div className="relative z-10">
-              <span className="font-label text-[10px] uppercase tracking-widest opacity-60 mb-2 block">
-                Dark Moon Insight
+              <span className="font-label text-[10px] uppercase tracking-widest text-inverse-on-surface/50 mb-2 block">
+                Hidden Lines Insight
               </span>
-              <h3 className="font-headline font-serif text-xl mb-3 text-white">
-                Hidden Shadows
+              <h3 className="font-headline font-serif text-xl mb-3 text-inverse-on-surface">
+                Minor Lines
               </h3>
-              <p className="opacity-80 text-sm">
-                Reveal the unconscious patterns that have been holding back your
-                career trajectory.
+              <p className="text-inverse-on-surface/60 text-sm">
+                Reveal the fate line, sun line, and intuition line patterns
+                shaping your career trajectory.
               </p>
               <Link
                 to="/checkout"
-                className="mt-4 block font-label text-xs text-tertiary-fixed underline underline-offset-4 cursor-pointer"
+                className="mt-4 block font-label text-xs text-tertiary-fixed underline underline-offset-4 cursor-pointer hover:opacity-80 transition-opacity"
               >
                 Unlock with Pro
               </Link>
             </div>
             <span
-              className="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10"
+              className="material-symbols-outlined absolute -bottom-4 -right-4 text-inverse-on-surface/5"
               style={{ fontVariationSettings: "'FILL' 1", fontSize: '120px' }}
             >
               bedtime
@@ -100,36 +104,24 @@ export default function InsightsPage() {
       </div>
 
       {/* Paywall / Upgrade */}
-      <section className="relative bg-surface-container-low rounded-xl overflow-hidden py-20 px-8 md:px-20">
-        <div className="absolute inset-0 editorial-gradient opacity-5" />
+      <section className="relative glass-card-strong rounded-2xl overflow-hidden py-20 px-8 md:px-20 glow-purple z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 to-tertiary/2 pointer-events-none" />
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-headline font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Your 20-Page Celestial Manuscript.
+            <h2 className="font-headline font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight gradient-text-hero">
+              Your 20-Page Palm Reading Manuscript.
             </h2>
             <p className="text-on-surface-variant text-lg mb-10 leading-relaxed">
-              Go beyond the surface. Our advanced AI alchemists have synthesized
-              your palm topography into a comprehensive editorial report. This
-              is not just a reading; it is a roadmap for your next decade.
+              Go beyond the surface. Our advanced analysis has mapped
+              your palm&rsquo;s unique topology into a comprehensive report. This
+              is not just a reading; it is a roadmap for your next chapter.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 mb-12">
               {[
-                {
-                  title: 'Health & Vitality',
-                  desc: 'Complete lifespan analysis.',
-                },
-                {
-                  title: 'Karmic Debt',
-                  desc: 'Patterns from past lineage.',
-                },
-                {
-                  title: 'Wealth Forecast',
-                  desc: 'Financial peaks and troughs.',
-                },
-                {
-                  title: 'The 12 Houses',
-                  desc: 'Astrological palm alignment.',
-                },
+                { title: 'Heart & Head Lines', desc: 'Emotional and mental patterns.' },
+                { title: 'Life Line Analysis', desc: 'Vitality and life changes.' },
+                { title: 'Mount Readings', desc: 'Jupiter, Saturn, Apollo, Mercury.' },
+                { title: 'Minor Lines', desc: 'Fate, Sun, and Intuition lines.' },
               ].map((item) => (
                 <li key={item.title} className="flex items-start gap-3">
                   <span
@@ -139,7 +131,7 @@ export default function InsightsPage() {
                     check_circle
                   </span>
                   <div>
-                    <span className="block font-bold text-sm">
+                    <span className="block font-bold text-sm text-on-surface">
                       {item.title}
                     </span>
                     <span className="text-xs text-on-surface-variant">
@@ -152,7 +144,7 @@ export default function InsightsPage() {
           </div>
 
           {/* Price Card */}
-          <div className="flex flex-col items-center justify-center p-8 bg-surface-container-lowest rounded-xl shadow-2xl shadow-primary/5 border-[0.5px] border-outline-variant/15">
+          <div className="flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-xl glow-purple border border-primary/5">
             <div className="w-full text-center mb-8">
               <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-2 block">
                 One-Time Offering
@@ -161,7 +153,7 @@ export default function InsightsPage() {
                 <span className="text-2xl font-headline font-serif mb-2 text-on-surface-variant">
                   $
                 </span>
-                <span className="text-7xl font-headline font-serif font-bold text-primary">
+                <span className="text-7xl font-headline font-serif font-bold gradient-text">
                   29
                 </span>
                 <span className="text-lg font-label text-on-surface-variant mb-2">
@@ -174,11 +166,11 @@ export default function InsightsPage() {
             </div>
             <Link
               to="/checkout"
-              className="w-full editorial-gradient text-on-primary py-5 rounded-full font-label text-sm uppercase tracking-widest font-bold shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform active:scale-95 text-center block"
+              className="w-full editorial-gradient text-white py-5 rounded-full font-label text-sm uppercase tracking-widest font-bold shadow-lg shadow-primary/15 hover:shadow-primary/30 hover:scale-[1.02] transition-all duration-300 active:scale-95 text-center block"
             >
               Purchase Full Report
             </Link>
-            <div className="mt-8 flex items-center gap-6 opacity-40">
+            <div className="mt-8 flex items-center gap-6 text-on-surface-variant/25">
               <span className="material-symbols-outlined">payments</span>
               <span className="material-symbols-outlined">shield</span>
               <span className="material-symbols-outlined">verified_user</span>

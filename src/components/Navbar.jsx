@@ -17,17 +17,15 @@ export default function Navbar() {
       ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 glass-nav border-b border-outline-variant/30">
       <div className="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
-        {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-serif text-indigo-900 italic tracking-tight hover:opacity-80 transition-opacity"
+          className="text-2xl font-serif italic tracking-tight hover:opacity-80 transition-opacity gradient-text"
         >
           The Alchemist
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex space-x-12 items-center">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.href
@@ -35,10 +33,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`transition-all duration-300 ease-in-out ${
+                className={`text-sm tracking-wider uppercase transition-all duration-300 ${
                   isActive
-                    ? 'text-indigo-600 font-semibold border-b-2 border-indigo-600'
-                    : 'text-gray-600 hover:text-indigo-500'
+                    ? 'text-primary font-semibold'
+                    : 'text-on-surface-variant hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -47,21 +45,19 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* CTA Button */}
         {isCheckout ? (
-          <button className="text-indigo-900 p-2 hover:bg-slate-50/50 rounded-full transition-all">
+          <button className="text-on-surface-variant p-2 hover:text-primary rounded-full transition-all">
             <span className="material-symbols-outlined">account_circle</span>
           </button>
         ) : (
           <Link
             to="/upload"
-            className="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-8 py-3 rounded-full font-label font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity"
+            className="editorial-gradient text-white px-8 py-3 rounded-full font-label font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
           >
             Start Reading
           </Link>
         )}
 
-        {/* Mobile Menu Button */}
         <button className="md:hidden text-on-surface">
           <span className="material-symbols-outlined">menu</span>
         </button>

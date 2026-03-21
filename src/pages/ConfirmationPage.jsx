@@ -1,24 +1,24 @@
-import { Link } from 'react-router-dom'
-
 export default function ConfirmationPage() {
   return (
     <div className="flex-grow flex items-center justify-center px-6 pt-24 pb-12 min-h-screen">
-      <div className="max-w-3xl w-full text-center space-y-12 animate-fade-in-up">
+      {/* Ambient orbs */}
+      <div className="fixed top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[120px] animate-orb pointer-events-none" />
+      <div className="fixed bottom-1/4 right-1/4 w-[400px] h-[400px] bg-tertiary/3 rounded-full blur-[100px] animate-orb pointer-events-none" style={{ animationDelay: '3s' }} />
+
+      <div className="max-w-3xl w-full text-center space-y-12 animate-fade-in-up relative z-10">
         {/* Celestial Illustration */}
         <div className="relative flex justify-center">
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary/10 via-tertiary-container/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary-container/40 via-tertiary-container/20 to-primary-container/10 flex items-center justify-center relative overflow-hidden glow-purple">
             <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full border border-primary/10" />
             <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full border border-tertiary/10" />
             <div className="relative z-10 flex flex-col items-center">
               <span
                 className="material-symbols-outlined text-primary text-7xl md:text-8xl"
-                style={{
-                  fontVariationSettings: "'FILL' 0, 'wght' 200",
-                }}
+                style={{ fontVariationSettings: "'FILL' 0, 'wght' 200" }}
               >
                 auto_awesome
               </span>
-              <div className="mt-4 text-primary-dim font-serif italic text-xl tracking-wide">
+              <div className="mt-4 font-serif italic text-xl tracking-wide gradient-text">
                 Aligned.
               </div>
             </div>
@@ -27,11 +27,11 @@ export default function ConfirmationPage() {
 
         {/* Headline */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-headline font-serif italic font-light text-on-surface tracking-tighter leading-tight">
-            Your Celestial Journey Awaits
+          <h1 className="text-4xl md:text-6xl font-headline font-serif italic font-light tracking-tighter leading-tight gradient-text-hero">
+            Your Reading is Complete
           </h1>
           <p className="text-on-surface-variant max-w-lg mx-auto font-body text-lg leading-relaxed">
-            The stars have aligned for your arrival. Your personal manuscript is
+            Your personal palm reading manuscript is
             ready for contemplation and discovery.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function ConfirmationPage() {
           <div className="inline-block group">
             <a
               href="#"
-              className="flex items-center gap-4 bg-gradient-to-r from-primary to-primary-dim text-on-primary px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 active:scale-95 group-hover:-translate-y-1"
+              className="flex items-center gap-4 editorial-gradient text-white px-10 py-5 rounded-full shadow-xl shadow-primary/15 hover:shadow-2xl hover:shadow-primary/25 transition-all duration-300 active:scale-95 group-hover:-translate-y-1"
             >
               <span className="material-symbols-outlined text-3xl">
                 picture_as_pdf
@@ -52,7 +52,7 @@ export default function ConfirmationPage() {
             </a>
           </div>
           <div className="flex flex-col items-center space-y-2">
-            <div className="flex items-center gap-2 text-on-surface-variant/80 text-sm font-label uppercase tracking-widest">
+            <div className="flex items-center gap-2 text-on-surface-variant/60 text-sm font-label uppercase tracking-widest">
               <span className="material-symbols-outlined text-base">mail</span>
               <span>A digital copy has been sent to your email</span>
             </div>
@@ -64,36 +64,32 @@ export default function ConfirmationPage() {
           {[
             {
               icon: 'menu_book',
-              title: 'Wisdom',
-              desc: '20 pages of personalized palmistry insights and planetary alignments.',
-              color: 'tertiary',
+              title: 'Your Lines',
+              desc: '20 pages of personalized palm line analysis and interpretations.',
+              accent: 'tertiary',
             },
             {
               icon: 'history_edu',
-              title: 'Rituals',
-              desc: 'Guided practices specifically tailored to your unique hand markings.',
-              color: 'primary',
+              title: 'Your Mounts',
+              desc: 'Detailed readings of all seven mounts and their influence on your life.',
+              accent: 'primary',
             },
             {
               icon: 'hourglass_empty',
-              title: 'Continuity',
-              desc: 'Lifetime access to your celestial archive through your account.',
-              color: 'tertiary-fixed-dim',
+              title: 'Lifetime Access',
+              desc: 'Lifetime access to your palm reading archive through your account.',
+              accent: 'tertiary',
             },
           ].map((card) => (
             <div
               key={card.title}
-              className="bg-surface-container-low p-8 rounded-xl text-left space-y-4 relative overflow-hidden group hover:shadow-md transition-shadow"
+              className="glass-card p-8 rounded-2xl text-left space-y-4 relative overflow-hidden hover-lift"
             >
-              <div
-                className={`absolute top-0 left-0 w-full h-1 bg-${card.color}`}
-              />
-              <span
-                className={`material-symbols-outlined text-${card.color}`}
-              >
+              <div className={`absolute top-0 left-0 w-full h-1 bg-${card.accent}`} />
+              <span className={`material-symbols-outlined text-${card.accent}`}>
                 {card.icon}
               </span>
-              <h3 className="font-headline font-serif italic text-xl text-indigo-900">
+              <h3 className="font-headline font-serif italic text-xl text-on-surface">
                 {card.title}
               </h3>
               <p className="text-sm text-on-surface-variant font-body leading-relaxed">

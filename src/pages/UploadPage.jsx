@@ -36,22 +36,26 @@ export default function UploadPage() {
 
   return (
     <div className="pt-32 pb-20 px-6 max-w-5xl mx-auto w-full">
+      {/* Ambient orbs */}
+      <div className="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[120px] animate-orb pointer-events-none" />
+      <div className="fixed bottom-1/3 -left-40 w-[400px] h-[400px] bg-tertiary/3 rounded-full blur-[100px] animate-orb pointer-events-none" style={{ animationDelay: '3s' }} />
+
       {/* Header */}
-      <section className="mb-16 text-center animate-fade-in-up">
+      <section className="mb-16 text-center animate-fade-in-up relative z-10">
         <h1 className="font-headline font-serif italic text-5xl md:text-6xl text-on-surface mb-6 tracking-tight">
           Initiate the Vision
         </h1>
         <p className="font-body text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
           Your journey begins with clarity. Upload high-resolution captures of
-          your palms to allow the Oracle to decipher the celestial geometry
+          your palms to allow the Oracle to decipher the geometry
           within your lines.
         </p>
       </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
         {/* Left: Guidelines */}
         <div className="lg:col-span-4 space-y-8">
-          <div className="bg-surface-container-low p-8 rounded-xl border-l-4 border-tertiary">
+          <div className="glass-card-strong p-8 rounded-2xl border-l-4 border-tertiary">
             <h3 className="font-headline font-serif text-xl mb-6 text-on-surface">
               Guidance for Clarity
             </h3>
@@ -102,12 +106,12 @@ export default function UploadPage() {
           </div>
 
           {/* Insight Prism */}
-          <div className="bg-surface-container-lowest p-6 rounded-xl relative shadow-sm">
-            <div className="absolute top-0 left-0 w-full h-1 bg-tertiary rounded-t-xl" />
+          <div className="glass-card p-6 rounded-2xl relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tertiary to-primary rounded-t-2xl" />
             <h4 className="font-label font-bold text-xs uppercase tracking-widest text-tertiary mb-3 mt-2">
               The Oracle&rsquo;s Tip
             </h4>
-            <p className="text-sm text-on-surface italic">
+            <p className="text-sm text-on-surface-variant italic">
               &ldquo;The left hand reveals your potential at birth; the right
               hand shows what you have made of it.&rdquo;
             </p>
@@ -120,14 +124,14 @@ export default function UploadPage() {
           <div className="group relative">
             <div
               onClick={() => handleFileSelect('left')}
-              className={`aspect-[3/4] rounded-xl bg-surface-container-lowest border-2 border-dashed flex flex-col items-center justify-center p-8 text-center transition-all cursor-pointer ${
+              className={`aspect-[3/4] rounded-2xl flex flex-col items-center justify-center p-8 text-center transition-all duration-300 cursor-pointer ${
                 leftPreview
-                  ? 'border-primary/50 bg-white'
-                  : 'border-outline-variant/30 hover:border-primary/50 hover:bg-white'
+                  ? 'glass-card-strong border-primary/20'
+                  : 'glass-card hover:shadow-lg hover:shadow-primary/5'
               }`}
             >
               {leftPreview ? (
-                <div className="w-full h-full relative rounded-lg overflow-hidden">
+                <div className="w-full h-full relative rounded-xl overflow-hidden">
                   <img
                     src={leftPreview}
                     alt="Left palm"
@@ -142,18 +146,18 @@ export default function UploadPage() {
                 </div>
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-full bg-primary-container/50 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-all duration-300">
                     <span className="material-symbols-outlined text-3xl">
                       front_hand
                     </span>
                   </div>
-                  <h3 className="font-headline font-serif text-xl mb-2">
+                  <h3 className="font-headline font-serif text-xl mb-2 text-on-surface">
                     The Past
                   </h3>
                   <p className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6">
                     Left Palm Capture
                   </p>
-                  <span className="bg-surface-container-high text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors text-sm">
+                  <span className="bg-primary-container/30 text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors text-sm border border-primary/10">
                     Select Image
                   </span>
                 </>
@@ -165,14 +169,14 @@ export default function UploadPage() {
           <div className="group relative">
             <div
               onClick={() => handleFileSelect('right')}
-              className={`aspect-[3/4] rounded-xl bg-surface-container-lowest border-2 border-dashed flex flex-col items-center justify-center p-8 text-center transition-all cursor-pointer ${
+              className={`aspect-[3/4] rounded-2xl flex flex-col items-center justify-center p-8 text-center transition-all duration-300 cursor-pointer ${
                 rightPreview
-                  ? 'border-primary/50 bg-white'
-                  : 'border-outline-variant/30 hover:border-primary/50 hover:bg-white'
+                  ? 'glass-card-strong border-primary/20'
+                  : 'glass-card hover:shadow-lg hover:shadow-primary/5'
               }`}
             >
               {rightPreview ? (
-                <div className="w-full h-full relative rounded-lg overflow-hidden">
+                <div className="w-full h-full relative rounded-xl overflow-hidden">
                   <img
                     src={rightPreview}
                     alt="Right palm"
@@ -187,18 +191,18 @@ export default function UploadPage() {
                 </div>
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-full bg-primary-container/50 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-all duration-300">
                     <span className="material-symbols-outlined text-3xl">
                       pan_tool
                     </span>
                   </div>
-                  <h3 className="font-headline font-serif text-xl mb-2">
+                  <h3 className="font-headline font-serif text-xl mb-2 text-on-surface">
                     The Future
                   </h3>
                   <p className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6">
                     Right Palm Capture
                   </p>
-                  <span className="bg-surface-container-high text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors text-sm">
+                  <span className="bg-primary-container/30 text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors text-sm border border-primary/10">
                     Select Image
                   </span>
                 </>
@@ -207,14 +211,14 @@ export default function UploadPage() {
           </div>
 
           {/* Action Bar */}
-          <div className="md:col-span-2 mt-8 flex flex-col md:flex-row items-center justify-between gap-6 p-8 bg-inverse-surface rounded-xl text-on-primary">
+          <div className="md:col-span-2 mt-8 flex flex-col md:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-inverse-surface text-inverse-on-surface">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-white/10 rounded-full">
                 <span className="material-symbols-outlined">auto_awesome</span>
               </div>
               <div>
                 <p className="font-bold">Neural Synthesis Ready</p>
-                <p className="text-xs opacity-70">
+                <p className="text-xs opacity-60">
                   {bothUploaded
                     ? 'Both images received. Ready to begin analysis.'
                     : 'AI will begin analysis once both images are present.'}
@@ -224,10 +228,10 @@ export default function UploadPage() {
             <button
               onClick={handleAnalyze}
               disabled={!bothUploaded}
-              className={`w-full md:w-auto px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-bold shadow-lg transition-all ${
+              className={`w-full md:w-auto px-10 py-4 editorial-gradient text-white rounded-full font-bold shadow-lg transition-all ${
                 bothUploaded
                   ? 'hover:opacity-90 hover:scale-105 cursor-pointer'
-                  : 'opacity-50 cursor-not-allowed'
+                  : 'opacity-30 cursor-not-allowed'
               }`}
             >
               Analyze Palms
@@ -237,7 +241,7 @@ export default function UploadPage() {
       </div>
 
       {/* Decorative */}
-      <div className="mt-24 opacity-20 flex justify-center">
+      <div className="mt-24 opacity-15 flex justify-center relative z-10">
         <img
           className="w-64 grayscale mix-blend-multiply"
           src="/images/celestial-decorative.png"

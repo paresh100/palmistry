@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ─── Custom Theme ─── */
+@theme {
+  /* Colors */
+  --color-surface: #f9f9fb;
+  --color-surface-dim: #d7dadf;
+  --color-surface-bright: #f9f9fb;
+  --color-surface-variant: #dfe3e7;
+  --color-surface-container: #eceef1;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e6e8ec;
+  --color-surface-container-highest: #dfe3e7;
+  --color-surface-tint: #5054b5;
+  --color-background: #f9f9fb;
+  --color-on-surface: #2e3336;
+  --color-on-surface-variant: #5b6063;
+  --color-on-background: #2e3336;
+
+  --color-primary: #5054b5;
+  --color-primary-dim: #4448a8;
+  --color-primary-fixed: #9094fa;
+  --color-primary-fixed-dim: #8387eb;
+  --color-primary-container: #9094fa;
+  --color-on-primary: #fbf7ff;
+  --color-on-primary-container: #080575;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #16177e;
+
+  --color-secondary: #5c5d72;
+  --color-secondary-dim: #505266;
+  --color-secondary-fixed: #e1e0f9;
+  --color-secondary-fixed-dim: #d3d2eb;
+  --color-secondary-container: #e1e0f9;
+  --color-on-secondary: #fbf8ff;
+  --color-on-secondary-container: #4f5064;
+  --color-on-secondary-fixed: #3c3e51;
+  --color-on-secondary-fixed-variant: #595a6f;
+
+  --color-tertiary: #785a1a;
+  --color-tertiary-dim: #6b4e0e;
+  --color-tertiary-fixed: #fbd185;
+  --color-tertiary-fixed-dim: #ecc479;
+  --color-tertiary-container: #fbd185;
+  --color-on-tertiary: #fff8f1;
+  --color-on-tertiary-container: #624604;
+  --color-on-tertiary-fixed: #4a3400;
+  --color-on-tertiary-fixed-variant: #6c500f;
+
+  --color-error: #a8364b;
+  --color-error-dim: #6b0221;
+  --color-error-container: #f97386;
+  --color-on-error: #fff7f7;
+  --color-on-error-container: #6e0523;
+
+  --color-outline: #777b7f;
+  --color-outline-variant: #aeb2b6;
+
+  --color-inverse-surface: #0c0e10;
+  --color-inverse-on-surface: #9c9d9f;
+  --color-inverse-primary: #9094fa;
+
+  /* Fonts */
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+}
+
+/* ─── Base Styles ─── */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.font-serif {
+  font-family: var(--font-headline);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+/* ─── Glass Nav ─── */
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ─── Gradient Utilities ─── */
+.editorial-gradient {
+  background: linear-gradient(135deg, #5054b5 0%, #9094fa 100%);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #5054b5 0%, #9094fa 100%);
+}
+
+/* ─── Animations ─── */
+@keyframes scan {
+  0% { top: -40%; }
+  100% { top: 100%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.analyzing-scanline {
+  background: linear-gradient(to bottom, transparent, #9094fa, transparent);
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  top: -40%;
+  animation: scan 3s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.progress-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* ─── Ghost Border ─── */
+.ghost-border {
+  border: 0.5px solid rgba(174, 178, 182, 0.15);
+}
+
+/* ─── No Scrollbar ─── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Smooth Page Transitions ─── */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}

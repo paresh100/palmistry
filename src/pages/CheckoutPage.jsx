@@ -59,11 +59,11 @@ export default function CheckoutPage() {
                     Your Palm Reading Report
                   </span>
                   <h2 className="font-headline font-serif text-2xl text-on-surface italic">
-                    20-Page Palm Reading Report
+                    Extensive Palm Reading Report
                   </h2>
                 </div>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-                  A personalized 20-page report analyzing your major lines, minor
+                  An extensive personalized report analyzing your major lines, minor
                   lines, seven mounts, hand shape, and finger proportions.
                   Delivered instantly as a PDF.
                 </p>

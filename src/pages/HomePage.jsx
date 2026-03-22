@@ -30,7 +30,7 @@ export default function HomePage() {
             <p className="text-on-surface-variant font-body text-lg max-w-lg leading-relaxed">
               Get your{' '}
               <span className="text-on-surface font-semibold">
-                20-page palm reading report
+                extensive palm reading report
               </span>{' '}
               — a detailed personality profile based on the lines, mounts, and
               shape of your hands. No two palms are alike. No two reports are alike.
@@ -43,12 +43,15 @@ export default function HomePage() {
               >
                 Get My Palm Reading
               </Link>
-              <button className="flex items-center space-x-3 text-on-surface-variant font-label font-bold text-sm tracking-widest uppercase group hover:text-primary transition-colors">
+              <Link
+                to="/sample-report"
+                className="flex items-center space-x-3 text-on-surface-variant font-label font-bold text-sm tracking-widest uppercase group hover:text-primary transition-colors"
+              >
                 <span>See What&rsquo;s Inside</span>
                 <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
                   arrow_right_alt
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -91,7 +94,7 @@ export default function HomePage() {
               What Your Report Covers
             </h2>
             <p className="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">
-              A 20-page deep dive into the lines, mounts, and features of your
+              An extensive deep dive into the lines, mounts, and features of your
               palms — organized into four detailed chapters.
             </p>
           </div>
@@ -108,7 +111,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-4 relative z-10">
                 <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label text-[10px] uppercase tracking-widest font-bold border border-primary/10">
-                  Chapter 1 — 8 Pages
+                  Chapter 1 — Major Lines
                 </span>
                 <h3 className="font-serif italic text-4xl text-on-surface">
                   Heart, Head &amp; Life Lines
@@ -295,7 +298,7 @@ export default function HomePage() {
               Ready to read your palms?
             </h2>
             <p className="text-on-surface-variant text-lg">
-              Upload two photos of your palms and get your personalized 20-page
+              Upload two photos of your palms and get your personalized extensive
               report in minutes. Secure, private, and unique to your hands.
             </p>
             <div className="pt-8">

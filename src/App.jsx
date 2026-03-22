@@ -7,6 +7,7 @@ import AnalyzingPage from './pages/AnalyzingPage'
 import InsightsPage from './pages/InsightsPage'
 import CheckoutPage from './pages/CheckoutPage'
 import ConfirmationPage from './pages/ConfirmationPage'
+import SampleReportPage from './pages/SampleReportPage'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/confirmation" element={<ConfirmationPage />} />
+            <Route path="/sample-report" element={<SampleReportPage />} />
           </Routes>
         </main>
         <Footer />

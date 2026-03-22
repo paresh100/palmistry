@@ -15,6 +15,13 @@ export default function InsightsPage() {
         <h1 className="font-headline font-serif text-5xl md:text-7xl font-bold leading-tight -tracking-[0.02em] italic">
           <span className="gradient-text-hero">Here&rsquo;s What We Found.</span>
         </h1>
+        <Link
+          to="/sample-report"
+          className="inline-flex items-center gap-2 mt-6 text-primary font-label text-sm uppercase tracking-widest font-bold hover:opacity-80 transition-opacity"
+        >
+          View Full Sample Report
+          <span className="material-symbols-outlined text-sm">arrow_right_alt</span>
+        </Link>
       </header>
 
       {/* Insights Grid */}
@@ -111,22 +118,22 @@ export default function InsightsPage() {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-headline font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight gradient-text-hero">
-              Your Full 20-Page Palm Reading Report
+              Your Full Palm Reading Report
             </h2>
             <p className="text-on-surface-variant text-lg mb-10 leading-relaxed">
               Your preview is just the beginning. The full report covers all
               three major lines, seven mounts, minor lines, hand shape
               classification, finger analysis, and a comparison of both palms —
-              20 pages of personalized insights delivered as a PDF.
+              an extensive collection of personalized insights delivered as a PDF.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-12 mb-12">
               {[
-                { title: 'Heart, Head & Life Lines', desc: 'Emotional style, thinking patterns, energy. (8 pages)' },
-                { title: 'The Seven Mounts', desc: 'Leadership, creativity, communication mapped. (4 pages)' },
-                { title: 'Hand Shape & Fingers', desc: 'Earth, Air, Water, or Fire type + proportions. (3 pages)' },
-                { title: 'Minor Lines', desc: 'Fate, Sun, Mercury, and relationship lines. (3 pages)' },
-                { title: 'Left vs. Right Comparison', desc: 'Innate personality vs. who you have become. (1 page)' },
-                { title: 'Personal Summary', desc: 'Key traits, strengths, growth areas at a glance. (1 page)' },
+                { title: 'Heart, Head & Life Lines', desc: 'Emotional style, thinking patterns, and energy.' },
+                { title: 'The Seven Mounts', desc: 'Leadership, creativity, communication mapped.' },
+                { title: 'Hand Shape & Fingers', desc: 'Earth, Air, Water, or Fire type + proportions.' },
+                { title: 'Minor Lines', desc: 'Fate, Sun, Mercury, and relationship lines.' },
+                { title: 'Left vs. Right Comparison', desc: 'Innate personality vs. who you have become.' },
+                { title: 'Personal Summary', desc: 'Key traits, strengths, growth areas at a glance.' },
               ].map((item) => (
                 <li key={item.title} className="flex items-start gap-3">
                   <span

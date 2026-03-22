@@ -13,7 +13,7 @@ export default function Navbar() {
     : [
         { label: 'Home', href: '/' },
         { label: 'How It Works', href: '/upload' },
-        { label: 'Sample Report', href: '/insights' },
+        { label: 'Sample Report', href: '/sample-report' },
       ]
 
   return (

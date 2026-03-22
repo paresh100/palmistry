@@ -31,7 +31,7 @@ export default function ConfirmationPage() {
             Your Report is Ready
           </h1>
           <p className="text-on-surface-variant max-w-lg mx-auto font-body text-lg leading-relaxed">
-            Your 20-page palm reading report is ready to download. A copy has
+            Your palm reading report is ready to download. A copy has
             also been sent to your email.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function ConfirmationPage() {
                 picture_as_pdf
               </span>
               <span className="font-body font-semibold text-lg tracking-wide">
-                Download My 20-Page Report
+                Download My Full Report
               </span>
             </a>
           </div>

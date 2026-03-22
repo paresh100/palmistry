@@ -3,19 +3,29 @@ import { useNavigate } from 'react-router-dom'
 
 const ANALYSIS_STEPS = [
   {
-    label: 'Verifying scan quality...',
-    description: 'Luminosity and resolution within acceptable threshold.',
+    label: 'Checking image quality...',
+    description: 'Verifying lighting and resolution for accurate line detection.',
+    duration: 2000,
+  },
+  {
+    label: 'Identifying major lines...',
+    description: 'Tracing your heart line, head line, and life line.',
     duration: 2500,
   },
   {
-    label: 'Mapping palm lines...',
-    description: 'Tracing heart, head, and life lines for detailed reading.',
-    duration: 4000,
+    label: 'Analyzing mounts and hand shape...',
+    description: 'Measuring the seven mounts and classifying your hand type.',
+    duration: 2500,
   },
   {
-    label: 'Generating Palm Insights',
-    description: 'Synthesizing line patterns and mount formations.',
-    duration: 3000,
+    label: 'Reading minor lines and features...',
+    description: 'Examining fate line, sun line, finger proportions, and thumb angle.',
+    duration: 2000,
+  },
+  {
+    label: 'Comparing both palms...',
+    description: 'Cross-referencing dominant and non-dominant hands for your growth profile.',
+    duration: 1500,
   },
 ]
 
@@ -68,16 +78,12 @@ export default function AnalyzingPage() {
             <img
               className="w-full h-full object-cover opacity-80"
               src="/images/palm-scan.png"
-              alt="Palm being scanned"
+              alt="Palm being analyzed"
             />
-            {/* Scanline Animation */}
             <div className="analyzing-scanline" />
-            {/* Top accent */}
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-tertiary to-primary" />
-            {/* Markers */}
             <div className="absolute top-1/4 left-1/3 w-4 h-4 rounded-full border-2 border-primary bg-white/60 backdrop-blur-sm animate-pulse" />
             <div className="absolute bottom-1/3 right-1/4 w-3 h-3 rounded-full border-2 border-tertiary bg-white/60 backdrop-blur-sm animate-pulse" />
-            {/* Status Badge */}
             <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-lg px-6 py-4 rounded-xl border border-outline-variant/20 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span
@@ -101,17 +107,17 @@ export default function AnalyzingPage() {
         <div className="space-y-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <div className="space-y-4">
             <h1 className="font-headline font-serif text-5xl lg:text-6xl text-on-surface leading-tight -tracking-[0.02em]">
-              Reading <br />
+              Analyzing <br />
               <span className="italic gradient-text">your palms.</span>
             </h1>
             <p className="text-on-surface-variant font-body text-lg leading-relaxed max-w-md">
-              Our analysis is mapping the lines and mounts of your
-              palm. This precision requires a moment of stillness.
+              We&rsquo;re examining over 30 features across both of your palms.
+              This takes a moment.
             </p>
           </div>
 
           {/* Steps */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {ANALYSIS_STEPS.map((step, i) => {
               const isCompleted = i < currentStep
               const isActive = i === currentStep
@@ -153,7 +159,7 @@ export default function AnalyzingPage() {
                       {step.description}
                     </p>
                     {isActive && (
-                      <div className="mt-4 h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden relative">
+                      <div className="mt-3 h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden relative">
                         <div
                           className="absolute inset-0 editorial-gradient rounded-full overflow-hidden transition-all duration-100"
                           style={{ width: `${Math.min(progress, 100)}%` }}
@@ -168,29 +174,18 @@ export default function AnalyzingPage() {
             })}
           </div>
 
-          {/* Flourish */}
           <div className="pt-8 border-t border-outline-variant/20 flex items-center gap-4">
             <span
               className="material-symbols-outlined text-tertiary"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
-              auto_awesome
+              fingerprint
             </span>
             <span className="font-headline font-serif italic text-on-surface-variant">
-              Every palm tells a unique story.
+              No two palms are identical — not even your own left and right.
             </span>
           </div>
         </div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="fixed top-0 right-0 p-12 pointer-events-none opacity-5">
-        <span
-          className="material-symbols-outlined text-primary text-[120px]"
-          style={{ fontVariationSettings: "'wght' 100" }}
-        >
-          temple_hindu
-        </span>
       </div>
     </div>
   )

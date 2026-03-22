@@ -6,7 +6,7 @@ export default function ConfirmationPage() {
       <div className="fixed bottom-1/4 right-1/4 w-[400px] h-[400px] bg-tertiary/3 rounded-full blur-[100px] animate-orb pointer-events-none" style={{ animationDelay: '3s' }} />
 
       <div className="max-w-3xl w-full text-center space-y-12 animate-fade-in-up relative z-10">
-        {/* Celestial Illustration */}
+        {/* Success Icon */}
         <div className="relative flex justify-center">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary-container/40 via-tertiary-container/20 to-primary-container/10 flex items-center justify-center relative overflow-hidden glow-purple">
             <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full border border-primary/10" />
@@ -16,10 +16,10 @@ export default function ConfirmationPage() {
                 className="material-symbols-outlined text-primary text-7xl md:text-8xl"
                 style={{ fontVariationSettings: "'FILL' 0, 'wght' 200" }}
               >
-                auto_awesome
+                check_circle
               </span>
               <div className="mt-4 font-serif italic text-xl tracking-wide gradient-text">
-                Aligned.
+                Complete.
               </div>
             </div>
           </div>
@@ -28,11 +28,11 @@ export default function ConfirmationPage() {
         {/* Headline */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl font-headline font-serif italic font-light tracking-tighter leading-tight gradient-text-hero">
-            Your Reading is Complete
+            Your Report is Ready
           </h1>
           <p className="text-on-surface-variant max-w-lg mx-auto font-body text-lg leading-relaxed">
-            Your personal palm reading manuscript is
-            ready for contemplation and discovery.
+            Your 20-page palm reading report is ready to download. A copy has
+            also been sent to your email.
           </p>
         </div>
 
@@ -47,37 +47,37 @@ export default function ConfirmationPage() {
                 picture_as_pdf
               </span>
               <span className="font-body font-semibold text-lg tracking-wide">
-                Download My 20-Page Manuscript
+                Download My 20-Page Report
               </span>
             </a>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <div className="flex items-center gap-2 text-on-surface-variant/60 text-sm font-label uppercase tracking-widest">
               <span className="material-symbols-outlined text-base">mail</span>
-              <span>A digital copy has been sent to your email</span>
+              <span>A copy has been sent to your email</span>
             </div>
           </div>
         </div>
 
-        {/* Insight Prism Cards */}
+        {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
           {[
             {
               icon: 'menu_book',
-              title: 'Your Lines',
-              desc: '20 pages of personalized palm line analysis and interpretations.',
+              title: 'Lines & Mounts',
+              desc: 'Heart, head, and life lines plus all seven mounts — analyzed and explained in plain English.',
               accent: 'tertiary',
             },
             {
-              icon: 'history_edu',
-              title: 'Your Mounts',
-              desc: 'Detailed readings of all seven mounts and their influence on your life.',
+              icon: 'back_hand',
+              title: 'Hand Profile',
+              desc: 'Your hand shape type, finger proportions, and a comparison of both palms.',
               accent: 'primary',
             },
             {
-              icon: 'hourglass_empty',
-              title: 'Lifetime Access',
-              desc: 'Lifetime access to your palm reading archive through your account.',
+              icon: 'download',
+              title: 'Yours Forever',
+              desc: 'Download your report anytime. No subscription, no expiration.',
               accent: 'tertiary',
             },
           ].map((card) => (

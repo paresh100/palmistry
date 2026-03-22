@@ -43,12 +43,11 @@ export default function UploadPage() {
       {/* Header */}
       <section className="mb-16 text-center animate-fade-in-up relative z-10">
         <h1 className="font-headline font-serif italic text-5xl md:text-6xl text-on-surface mb-6 tracking-tight">
-          Initiate the Vision
+          Upload Your Palms
         </h1>
         <p className="font-body text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
-          Your journey begins with clarity. Upload high-resolution captures of
-          your palms to allow the Oracle to decipher the geometry
-          within your lines.
+          Take a clear photo of each palm. Our analysis examines the lines,
+          mounts, and shape of your hands to build your personalized report.
         </p>
       </section>
 
@@ -57,7 +56,7 @@ export default function UploadPage() {
         <div className="lg:col-span-4 space-y-8">
           <div className="glass-card-strong p-8 rounded-2xl border-l-4 border-tertiary">
             <h3 className="font-headline font-serif text-xl mb-6 text-on-surface">
-              Guidance for Clarity
+              Photo Tips
             </h3>
             <ul className="space-y-6">
               <li className="flex gap-4">
@@ -66,11 +65,11 @@ export default function UploadPage() {
                 </span>
                 <div>
                   <p className="font-label font-bold text-xs uppercase tracking-widest text-on-surface mb-1">
-                    Illumination
+                    Good Lighting
                   </p>
                   <p className="text-sm text-on-surface-variant">
-                    Use soft, natural daylight. Avoid harsh shadows or direct
-                    flash.
+                    Use natural light. Avoid flash — it washes out the fine
+                    lines we need to read.
                   </p>
                 </div>
               </li>
@@ -80,11 +79,11 @@ export default function UploadPage() {
                 </span>
                 <div>
                   <p className="font-label font-bold text-xs uppercase tracking-widest text-on-surface mb-1">
-                    Precision
+                    Flat Hand
                   </p>
                   <p className="text-sm text-on-surface-variant">
-                    Keep your hand flat and fingers together. Ensure the entire
-                    palm is visible.
+                    Hold your hand flat with fingers together, palm facing up.
+                    Make sure we can see from fingertips to wrist.
                   </p>
                 </div>
               </li>
@@ -94,26 +93,28 @@ export default function UploadPage() {
                 </span>
                 <div>
                   <p className="font-label font-bold text-xs uppercase tracking-widest text-on-surface mb-1">
-                    Resolution
+                    Clear Photo
                   </p>
                   <p className="text-sm text-on-surface-variant">
-                    Hold the camera parallel to your palm. Focus on the major
-                    lines.
+                    Hold your phone about 8 inches above your palm. Make sure
+                    the image is sharp and in focus.
                   </p>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Insight Prism */}
+          {/* Why Both Hands */}
           <div className="glass-card p-6 rounded-2xl relative">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tertiary to-primary rounded-t-2xl" />
             <h4 className="font-label font-bold text-xs uppercase tracking-widest text-tertiary mb-3 mt-2">
-              The Oracle&rsquo;s Tip
+              Why Both Hands?
             </h4>
-            <p className="text-sm text-on-surface-variant italic">
-              &ldquo;The left hand reveals your potential at birth; the right
-              hand shows what you have made of it.&rdquo;
+            <p className="text-sm text-on-surface-variant">
+              Your non-dominant hand shows your natural personality — the traits
+              you were born with. Your dominant hand shows who you&rsquo;ve
+              become through experience. Comparing both reveals your personal
+              growth.
             </p>
           </div>
         </div>
@@ -152,10 +153,10 @@ export default function UploadPage() {
                     </span>
                   </div>
                   <h3 className="font-headline font-serif text-xl mb-2 text-on-surface">
-                    The Past
+                    Left Hand
                   </h3>
                   <p className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6">
-                    Left Palm Capture
+                    Non-Dominant Hand
                   </p>
                   <span className="bg-primary-container/30 text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors text-sm border border-primary/10">
                     Select Image
@@ -197,10 +198,10 @@ export default function UploadPage() {
                     </span>
                   </div>
                   <h3 className="font-headline font-serif text-xl mb-2 text-on-surface">
-                    The Future
+                    Right Hand
                   </h3>
                   <p className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6">
-                    Right Palm Capture
+                    Dominant Hand
                   </p>
                   <span className="bg-primary-container/30 text-primary font-medium px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors text-sm border border-primary/10">
                     Select Image
@@ -217,11 +218,11 @@ export default function UploadPage() {
                 <span className="material-symbols-outlined">auto_awesome</span>
               </div>
               <div>
-                <p className="font-bold">Neural Synthesis Ready</p>
+                <p className="font-bold">Ready to Analyze</p>
                 <p className="text-xs opacity-60">
                   {bothUploaded
-                    ? 'Both images received. Ready to begin analysis.'
-                    : 'AI will begin analysis once both images are present.'}
+                    ? 'Both palms received. Ready to generate your report.'
+                    : 'Upload both palms to begin your reading.'}
                 </p>
               </div>
             </div>
@@ -238,15 +239,6 @@ export default function UploadPage() {
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Decorative */}
-      <div className="mt-24 opacity-15 flex justify-center relative z-10">
-        <img
-          className="w-64 grayscale mix-blend-multiply"
-          src="/images/celestial-decorative.png"
-          alt="Celestial decoration"
-        />
       </div>
     </div>
   )

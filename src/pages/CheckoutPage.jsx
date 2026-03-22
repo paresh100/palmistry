@@ -34,10 +34,10 @@ export default function CheckoutPage() {
             <span className="material-symbols-outlined mr-2 text-sm">
               arrow_back
             </span>
-            Return to Insights
+            Back to Preview
           </Link>
           <h1 className="font-headline font-serif text-4xl lg:text-5xl font-light italic">
-            <span className="gradient-text-hero">Secure your reading.</span>
+            <span className="gradient-text-hero">Complete Your Purchase</span>
           </h1>
         </div>
 
@@ -48,7 +48,7 @@ export default function CheckoutPage() {
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2 aspect-[3/4] rounded-xl overflow-hidden relative">
                 <img
-                  alt="Celestial Manuscript"
+                  alt="Palm reading report preview"
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                   src="/images/celestial-manuscript.png"
                 />
@@ -56,16 +56,16 @@ export default function CheckoutPage() {
               <div className="w-full md:w-1/2 space-y-6">
                 <div className="space-y-2">
                   <span className="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/50">
-                    Exclusive Manuscript
+                    Your Palm Reading Report
                   </span>
                   <h2 className="font-headline font-serif text-2xl text-on-surface italic">
                     20-Page Palm Reading Report
                   </h2>
                 </div>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-                  A comprehensive analysis of your major and minor palm lines,
-                  mount formations, and finger proportions. Hand-crafted insights
-                  delivered digitally.
+                  A personalized 20-page report analyzing your major lines, minor
+                  lines, seven mounts, hand shape, and finger proportions.
+                  Delivered instantly as a PDF.
                 </p>
                 <div className="flex items-baseline gap-2 pt-4">
                   <span className="font-label text-sm text-on-surface-variant/50">$</span>
@@ -121,7 +121,7 @@ export default function CheckoutPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-6 py-4 rounded-full bg-surface-container-low border border-outline-variant/30 focus:border-primary/40 focus:ring-1 focus:ring-primary/20 outline-none transition-all placeholder:text-on-surface-variant/30 text-on-surface"
-                placeholder="oracle@alchemist.com"
+                placeholder="you@email.com"
               />
             </div>
 
@@ -187,9 +187,9 @@ export default function CheckoutPage() {
                 </>
               ) : (
                 <>
-                  Purchase Report
+                  Purchase Report — $29.99
                   <span className="material-symbols-outlined text-sm">
-                    auto_awesome
+                    lock
                   </span>
                 </>
               )}
@@ -207,13 +207,13 @@ export default function CheckoutPage() {
         <p className="text-center mt-8 font-body text-[11px] text-on-surface-variant/40 leading-loose max-w-sm mx-auto">
           By purchasing, you agree to our{' '}
           <a href="#" className="underline hover:text-primary transition-colors">
-            Terms of Insight
+            Terms of Service
           </a>{' '}
           and acknowledge our{' '}
           <a href="#" className="underline hover:text-primary transition-colors">
             Privacy Policy
           </a>
-          . All readings are for guidance purposes.
+          . All readings are for entertainment and self-reflection purposes.
         </p>
       </section>
     </div>

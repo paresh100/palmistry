@@ -6,14 +6,14 @@ export default function Navbar() {
 
   const navLinks = isCheckout
     ? [
-        { label: 'My Readings', href: '/' },
-        { label: 'Rituals', href: '/upload' },
-        { label: 'Journal', href: '/insights' },
+        { label: 'Home', href: '/' },
+        { label: 'My Report', href: '/insights' },
+        { label: 'Support', href: '/' },
       ]
     : [
-        { label: 'Journey', href: '/' },
-        { label: 'Wisdom', href: '/insights' },
-        { label: 'Oracle', href: '/upload' },
+        { label: 'Home', href: '/' },
+        { label: 'How It Works', href: '/upload' },
+        { label: 'Sample Report', href: '/insights' },
       ]
 
   return (
@@ -54,7 +54,7 @@ export default function Navbar() {
             to="/upload"
             className="editorial-gradient text-white px-8 py-3 rounded-full font-label font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
           >
-            Start Reading
+            Get Your Reading
           </Link>
         )}
 

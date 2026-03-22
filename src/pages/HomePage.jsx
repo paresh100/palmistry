@@ -19,21 +19,21 @@ export default function HomePage() {
               >
                 auto_awesome
               </span>
-              <span>Palm Reading Analysis</span>
+              <span>Personality Assessment Through Palmistry</span>
             </div>
 
             <h1 className="font-serif italic text-6xl md:text-8xl leading-[0.95] tracking-tight">
-              <span className="text-on-surface">Your destiny,</span> <br />
-              <span className="gradient-text-hero">unveiled.</span>
+              <span className="text-on-surface">Your personality,</span> <br />
+              <span className="gradient-text-hero">read from your palms.</span>
             </h1>
 
             <p className="text-on-surface-variant font-body text-lg max-w-lg leading-relaxed">
-              Experience our{' '}
+              Get your{' '}
               <span className="text-on-surface font-semibold">
-                20-page comprehensive report
-              </span>
-              . A deep synthesis of ancient palmistry and modern analytical
-              precision tailored to your unique lines.
+                20-page palm reading report
+              </span>{' '}
+              — a detailed personality profile based on the lines, mounts, and
+              shape of your hands. No two palms are alike. No two reports are alike.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
@@ -41,10 +41,10 @@ export default function HomePage() {
                 to="/upload"
                 className="editorial-gradient text-white px-10 py-5 rounded-full font-label font-extrabold text-sm tracking-widest uppercase shadow-xl shadow-primary/15 hover:shadow-2xl hover:shadow-primary/25 hover:scale-105 transition-all duration-300 text-center"
               >
-                Get Started
+                Get My Palm Reading
               </Link>
               <button className="flex items-center space-x-3 text-on-surface-variant font-label font-bold text-sm tracking-widest uppercase group hover:text-primary transition-colors">
-                <span>The Process</span>
+                <span>See What&rsquo;s Inside</span>
                 <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
                   arrow_right_alt
                 </span>
@@ -56,14 +56,14 @@ export default function HomePage() {
           <div className="relative hidden lg:block">
             <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl glow-purple transform rotate-2">
               <img
-                alt="Celestial Map"
+                alt="Palm reading illustration"
                 className="w-full h-full object-cover"
                 src="/images/celestial-map.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-primary/5 to-transparent" />
             </div>
 
-            {/* Overlaid Insight Prism Card */}
+            {/* Overlaid Insight Card */}
             <div className="absolute -bottom-10 -left-10 glass-card-strong p-8 rounded-2xl max-w-xs transform -rotate-2 animate-float">
               <span
                 className="material-symbols-outlined text-tertiary mb-4"
@@ -72,70 +72,71 @@ export default function HomePage() {
                 fluid
               </span>
               <h4 className="font-serif italic text-xl mb-2 text-on-surface">
-                The Life Line Insight
+                Life Line Preview
               </h4>
               <p className="text-on-surface-variant text-sm leading-relaxed">
-                Your vitality curve suggests a period of significant creative
-                expansion starting this lunar cycle.
+                Your life line&rsquo;s depth and curvature indicate strong
+                resilience and a pattern of bouncing back from major transitions.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Bento Grid Section ─── */}
+      {/* ─── What Your Report Covers ─── */}
       <section className="py-32 px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 text-center space-y-4">
             <h2 className="font-serif italic text-5xl text-on-surface">
-              The Celestial Anthology
+              What Your Report Covers
             </h2>
             <p className="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">
-              Our 20-page report covers every facet of your journey through
-              three primary lenses of wisdom.
+              A 20-page deep dive into the lines, mounts, and features of your
+              palms — organized into four detailed chapters.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
-            {/* Bento 1: Heart & Head Lines */}
+            {/* Card 1: Heart, Head & Life Lines */}
             <div className="md:col-span-7 glass-card rounded-2xl p-12 flex flex-col justify-end relative overflow-hidden group hover-lift">
               <div className="absolute inset-0 -z-10 transition-transform duration-700 group-hover:scale-110">
                 <img
-                  alt="Mystical Hands"
+                  alt="Palm lines diagram"
                   className="w-full h-full object-cover opacity-10"
                   src="/images/mystical-hands.png"
                 />
               </div>
               <div className="space-y-4 relative z-10">
                 <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label text-[10px] uppercase tracking-widest font-bold border border-primary/10">
-                  Volume I
+                  Chapter 1 — 8 Pages
                 </span>
                 <h3 className="font-serif italic text-4xl text-on-surface">
-                  The Major Lines
+                  Heart, Head &amp; Life Lines
                 </h3>
                 <p className="text-on-surface-variant max-w-md">
-                  An 8-page deep-dive into your heart line, head line, and life
-                  line — the three pillars of classical palmistry that reveal
-                  your emotional, intellectual, and vital essence.
+                  The three lines everyone can see on their palm, decoded. Your
+                  heart line reveals your emotional style. Your head line shows
+                  how you think and decide. Your life line maps your energy and
+                  major transitions.
                 </p>
               </div>
             </div>
 
-            {/* Bento 2: Mounts & Fingers */}
+            {/* Card 2: The Seven Mounts */}
             <div className="md:col-span-5 bg-inverse-surface rounded-2xl p-10 flex flex-col space-y-6 hover-lift">
               <span
                 className="material-symbols-outlined text-tertiary-fixed text-4xl"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
-                stars
+                star_rate
               </span>
               <h3 className="font-serif italic text-3xl text-inverse-on-surface">
-                Mounts & Markers
+                The Seven Mounts
               </h3>
               <p className="text-inverse-on-surface/60 text-sm leading-relaxed">
-                Analyzing the mounts of Jupiter, Saturn, Apollo, and Mercury
-                to map your ambition, discipline, creativity, and communication
-                over the next 18 months.
+                The raised pads across your palm each map to a personality
+                trait — from ambition (Jupiter) to creativity (Apollo) to
+                intuition (Moon). Their prominence reveals your natural strengths.
               </p>
               <div className="mt-auto border-t border-inverse-on-surface/10 pt-6">
                 <button className="text-tertiary-fixed font-label text-xs uppercase tracking-widest font-bold flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -147,22 +148,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Bento 3: Accuracy */}
+            {/* Card 3: Features Analyzed */}
             <div className="md:col-span-4 bg-tertiary-container rounded-2xl p-8 flex items-center justify-between hover-lift">
               <div className="space-y-1">
                 <h4 className="font-body font-extrabold text-on-tertiary-container text-xs uppercase tracking-widest">
-                  Accuracy Rate
+                  Per Hand
                 </h4>
                 <p className="font-serif italic text-3xl text-on-tertiary-container">
-                  98.4%
+                  30+ Features
                 </p>
               </div>
               <span className="material-symbols-outlined text-on-tertiary-container/40 text-5xl">
-                verified
+                search
               </span>
             </div>
 
-            {/* Bento 4: Testimonial preview */}
+            {/* Card 4: Testimonial */}
             <div className="md:col-span-8 glass-card rounded-2xl p-8 flex items-center gap-12 hover-lift">
               <div className="flex -space-x-4">
                 {[1, 2, 3].map((i) => (
@@ -181,11 +182,12 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="font-body text-on-surface text-sm font-semibold italic">
-                  &ldquo;The clarity I found in my report was transformative. It
-                  felt like someone finally read my internal compass.&rdquo;
+                  &ldquo;I was skeptical, but the report nailed my personality.
+                  The head line section explained why I overthink everything —
+                  like a user manual for my own brain.&rdquo;
                 </p>
                 <span className="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mt-2 block">
-                  — Helena V., Digital Architect
+                  — Sarah K., Marketing Manager
                 </span>
               </div>
             </div>
@@ -198,16 +200,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 text-center space-y-4">
             <h2 className="font-serif italic text-5xl text-on-surface">
-              Voices from the Path
+              What People Are Saying
             </h2>
             <p className="text-on-surface-variant font-body text-lg max-w-2xl mx-auto">
-              Reflections from those who have journeyed through their 20-page
-              celestial anthology.
+              Real reactions from people who got their palm reading report.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
             <div className="glass-card p-10 rounded-2xl flex flex-col justify-between hover-lift">
               <div className="space-y-6">
                 <span
@@ -217,9 +217,10 @@ export default function HomePage() {
                   format_quote
                 </span>
                 <p className="font-serif italic text-xl leading-relaxed text-on-surface">
-                  &ldquo;The depth of the Mounts analysis predicted a
-                  career shift I was already feeling but hadn&rsquo;t
-                  articulated. Truly uncanny.&rdquo;
+                  &ldquo;The mounts section described my personality so
+                  accurately it was unsettling. It identified my ambition and
+                  creativity as dominant traits, which is exactly what drives
+                  my career.&rdquo;
                 </p>
               </div>
               <div className="mt-8 pt-8 border-t border-outline-variant/20">
@@ -232,7 +233,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Testimonial 2 (featured) */}
             <div className="bg-primary-container/40 border border-primary/10 p-10 rounded-2xl flex flex-col justify-between transform md:-translate-y-4 glow-purple">
               <div className="space-y-6">
                 <span
@@ -242,22 +242,22 @@ export default function HomePage() {
                   format_quote
                 </span>
                 <p className="font-serif italic text-xl leading-relaxed text-on-surface">
-                  &ldquo;I was skeptical of digital readings until I saw the
-                  precision of my heart line analysis. It&rsquo;s a 20-page
-                  mirror for the soul.&rdquo;
+                  &ldquo;I sent this to three friends and every one of them said
+                  the same thing: &lsquo;How did it know that about me?&rsquo;
+                  My heart line analysis described my relationship patterns
+                  better than my therapist.&rdquo;
                 </p>
               </div>
               <div className="mt-8 pt-8 border-t border-primary/10">
                 <p className="font-body font-bold text-on-surface uppercase tracking-widest text-xs">
-                  Helena V.
+                  Maya T.
                 </p>
                 <p className="font-label text-on-surface-variant text-[10px] uppercase tracking-[0.15em] mt-1">
-                  Digital Architect
+                  Product Designer
                 </p>
               </div>
             </div>
 
-            {/* Testimonial 3 */}
             <div className="glass-card p-10 rounded-2xl flex flex-col justify-between hover-lift">
               <div className="space-y-6">
                 <span
@@ -267,9 +267,10 @@ export default function HomePage() {
                   format_quote
                 </span>
                 <p className="font-serif italic text-xl leading-relaxed text-on-surface">
-                  &ldquo;Finally, a tool that bridges ancient wisdom with modern
-                  psychological insights. The finger analysis section changed my
-                  perspective.&rdquo;
+                  &ldquo;I&rsquo;ve done Myers-Briggs, Enneagram, all of it.
+                  This was different because it&rsquo;s based on something
+                  physically unique to me. The hand shape analysis alone was
+                  worth the price.&rdquo;
                 </p>
               </div>
               <div className="mt-8 pt-8 border-t border-outline-variant/20">
@@ -291,19 +292,18 @@ export default function HomePage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-primary via-tertiary to-primary rounded-full" />
           <div className="max-w-2xl mx-auto space-y-8 relative z-10">
             <h2 className="font-serif italic text-5xl gradient-text-hero">
-              Begin your alchemy.
+              Ready to read your palms?
             </h2>
             <p className="text-on-surface-variant text-lg">
-              Your report is waiting. Secure, private, and deeply personal.
-              Start your scan and receive your 20-page celestial anthology in
-              minutes.
+              Upload two photos of your palms and get your personalized 20-page
+              report in minutes. Secure, private, and unique to your hands.
             </p>
             <div className="pt-8">
               <Link
                 to="/upload"
                 className="inline-block editorial-gradient text-white px-16 py-6 rounded-full font-label font-extrabold text-sm tracking-[0.2em] uppercase shadow-2xl shadow-primary/15 hover:shadow-primary/30 hover:scale-105 transition-all duration-300 active:scale-95"
               >
-                Generate My Report
+                Get My Palm Reading
               </Link>
             </div>
             <div className="pt-12 flex justify-center items-center space-x-8 text-on-surface-variant/30">

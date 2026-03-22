@@ -8,6 +8,7 @@ import InsightsPage from './pages/InsightsPage'
 import CheckoutPage from './pages/CheckoutPage'
 import ConfirmationPage from './pages/ConfirmationPage'
 import SampleReportPage from './pages/SampleReportPage'
+import FAQPage from './pages/FAQPage'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/confirmation" element={<ConfirmationPage />} />
             <Route path="/sample-report" element={<SampleReportPage />} />
+            <Route path="/faq" element={<FAQPage />} />
           </Routes>
         </main>
         <Footer />

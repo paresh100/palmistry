@@ -8,7 +8,7 @@ export default function Navbar() {
     ? [
         { label: 'Home', href: '/' },
         { label: 'My Report', href: '/insights' },
-        { label: 'Support', href: '/' },
+        { label: 'FAQ', href: '/faq' },
       ]
     : [
         { label: 'Home', href: '/' },
